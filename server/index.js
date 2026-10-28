@@ -72,5 +72,5 @@ export function createAppServer() {
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  createAppServer().listen(port, () => console.log(`API и приложение: http://localhost:${port}`));
+  createAppServer().listen(port, '127.0.0.1', () => console.log(`API и приложение: http://127.0.0.1:${port}`));
 }
